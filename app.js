@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 
 var server = express()
 server.use(cors());
-mongoose.connect('mongodb+srv://numannasrullah:<numansahil@007>@cluster0-6cm4m.mongodb.net/test?retryWrites=true',{ useNewUrlParser: true },(err)=>{
+mongoose.connect('mongodb+srv://numannasrullah:numansahil@007@cluster0-6cm4m.mongodb.net/test?retryWrites=true',{ useNewUrlParser: true },(err)=>{
     if(err){
         console.log(err)
     }else {
