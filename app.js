@@ -18,7 +18,7 @@ server.use(bodyParser.urlencoded({ extended: true }))
 server.use(bodyParser.json())
 
 
-require('./server/config/passport-config')(server, users);
+require('./server/config/passport-config')(server);
 require('./server/routes/all-routes')(server);
 
 server.use((err, req, res, next) => {
