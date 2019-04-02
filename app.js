@@ -3,15 +3,15 @@ var bodyParser = require("body-parser");
 var cors = require('cors');
 var mongoose = require('mongoose');
 
-var server = express()
-server.use(cors());
-mongoose.connect('mongodb+srv://numannasrullah:numansahil@007@cluster0-6cm4m.mongodb.net/test?retryWrites=true',{ useNewUrlParser: true },(err)=>{
+mongoose.connect("mongodb+srv://numannasrullah:pakistan12345@cluster0-6cm4m.mongodb.net/test?retryWrites=true",{ useNewUrlParser: true },(err)=>{
     if(err){
         console.log(err)
     }else {
         console.log('DB Connected')
     }
 })
+var server = express()
+server.use(cors());
 server.use(express.static('./build'))
 server.use('/uploads',express.static('./uploads'));
 server.use(bodyParser.urlencoded({ extended: true }))
